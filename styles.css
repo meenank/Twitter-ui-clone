@@ -18,14 +18,16 @@
         .main-page-flex {
             display: flex;
             flex-flow: row wrap;
+            /* gap: 10rem; */
         }
         
         .side-panel {
-            /* position: fixed; */
+            position: sticky;
+            top: 0px;
             /* border: 1px solid red; */
             width: 18%;
             height: 100vh;
-            margin-left: 150px;
+            padding-left: 150px;
             margin-top: 0;
             border-right: 1px solid darkslategrey;
         }
@@ -36,7 +38,7 @@
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
-            gap: 0.5rem;
+            /* gap: 1 rem; */
             margin: 0;
             /* align-items: center; */
             height: 725px;
@@ -195,7 +197,11 @@
             flex-flow: row nowrap;
             justify-content: space-between;
             cursor: pointer;
-            height: 50px;
+            height: 55px;
+            background: rgba( 30, 5, 5, 0.05);
+            /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37); */
+            backdrop-filter: blur( 20px);
+            -webkit-backdrop-filter: blur( 20px);
         }
         
         .feed-panel .navigation div,
@@ -313,10 +319,12 @@
         }
         
         .feed-panel .feed {
+            /* overflow: scroll; */
             display: grid;
             grid-template-columns: 13% 100%;
-            grid-template-rows: 10rem;
+            grid-template-rows: max-content;
             border-bottom: 1px solid darkslategray;
+            padding-bottom: 2rem;
         }
         
         .feed-panel .feed .prof {
@@ -393,6 +401,64 @@
         }
         
         .tick {
-            width: 2.9%;
+            width: 4%;
             text-align: center;
+        }
+        /* trends panel styling */
+        
+        .trends-panel {
+            display: flex;
+            flex-flow: column wrap;
+            border-right: 1px solid red;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .search {
+            position: sticky;
+            top: 0.5rem;
+            background-color: #253341;
+            width: 350px;
+            height: 45px;
+            /* border: 1px solid red; */
+            margin: 0.2rem 1rem 1rem 1rem;
+            display: grid;
+            grid-template-columns: 17% 83%;
+            align-items: center;
+            border-radius: 5rem;
+            font-size: 1em;
+        }
+        
+        .search svg {
+            grid-column: 1/2;
+            margin-left: 20px;
+        }
+        
+        .search input {
+            grid-column: 2/3;
+            border-radius: 5rem;
+            outline: none;
+            border: none;
+            height: 45px;
+            width: 100%;
+            background-color: #253341;
+            font-size: 1em;
+            caret-color: aliceblue;
+            color: white;
+        }
+        
+        .trends-panel .happening {
+            border: 1px solid red;
+            border-radius: 1rem;
+            padding: 1rem;
+            width: 300px;
+            height: 560px;
+            background-color: #192734;
+            color: white;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        
+        .trends-panel .happening h3 {
+            margin-bottom: 1rem;
         }
