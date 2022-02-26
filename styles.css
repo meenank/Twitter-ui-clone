@@ -257,6 +257,7 @@
             outline: none;
             border: none;
             caret-color: azure;
+            color: white;
         }
         
         .feed-panel .pro-search .grid-3 {
@@ -325,6 +326,11 @@
             grid-template-rows: max-content;
             border-bottom: 1px solid darkslategray;
             padding-bottom: 2rem;
+            cursor: pointer;
+        }
+        
+        .feed-panel .feed:hover {
+            background-color: #202E3A;
         }
         
         .feed-panel .feed .prof {
@@ -379,6 +385,10 @@
             cursor: pointer;
         }
         
+        .hashtag:hover {
+            text-decoration: underline;
+        }
+        
         .news {
             font-weight: lighter;
             font-size: 1em;
@@ -395,7 +405,7 @@
         }
         
         .username {
-            color: gray;
+            color: #808080;
             font-weight: lighter;
             cursor: pointer;
         }
@@ -409,13 +419,22 @@
         .trends-panel {
             display: flex;
             flex-flow: column wrap;
-            border-right: 1px solid red;
+            /* border-right: 1px solid red; */
             gap: 1rem;
             align-items: center;
         }
         
-        .search {
+        .trends-panel .up-search {
+            width: 100%;
+            background-color: var(--default-bg);
             position: sticky;
+            top: 0;
+            height: 55px;
+            /* border: 1px solid rebeccapurple; */
+        }
+        
+        .search {
+            /* position: sticky; */
             top: 0.5rem;
             background-color: #253341;
             width: 350px;
@@ -427,6 +446,7 @@
             align-items: center;
             border-radius: 5rem;
             font-size: 1em;
+            /* gap: 0.5; */
         }
         
         .search svg {
@@ -444,30 +464,164 @@
             background-color: #253341;
             font-size: 1em;
             caret-color: aliceblue;
-            color: white;
         }
         
         .trends-panel .happening {
-            border: 1px solid red;
+            /* border-bottom: 1px solid red; */
             border-radius: 1rem;
-            padding: 1rem;
-            width: 300px;
-            height: 560px;
+            /* padding: 1rem; */
+            width: 350px;
+            height: 552px;
             background-color: #192734;
-            color: white;
+            /* color: white; */
             display: flex;
             flex-flow: column wrap;
         }
         
-        .trends-panel .happening h3 {
-            margin-bottom: 1rem;
+        .trends-panel .happening div {
+            padding: 1rem;
+            line-height: 1.2rem;
+        }
+        
+        .trends-panel .happening div:first-of-type {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            font-size: 1.4em;
+            color: aliceblue;
+        }
+        
+        .trends-panel .happening div:first-of-type:hover {
+            background-color: transparent;
+        }
+        
+        .trends-panel .happening div:hover {
+            background-color: #2D3741;
+        }
+        
+        .trends-panel .happening div:last-of-type {
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        
+        .trends-panel .happening div:last-of-type a {
+            text-decoration: none;
+            color: #1DA1F2;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        
+        .trends-panel .username {
+            font-size: 0.8em;
+        }
+        
+        .trends-panel .trend-2 .username {
+            font-size: 1em;
         }
         
         .trends-panel .follow {
-            height: 350px;
-            width: 300px;
-            padding: 1rem;
-            border: 1px solid red;
             border-radius: 1rem;
+            /* border: 1px sloid red; */
+            width: 350px;
+            background-color: #192734;
+            /* padding: 1rem; */
+            display: flex;
+            flex-flow: column wrap;
+        }
+        
+        .trends-panel .follow div:hover {
+            background-color: #2D3741;
+        }
+        
+        .trends-panel .follow div:first-of-type {
+            font-size: 1.1em;
             color: white;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            /* padding: 1rem; */
+        }
+        
+        .trends-panel .follow div:first-of-type:hover {
+            background-color: transparent;
+        }
+        
+        .trends-panel .follow .person1 {
+            display: grid;
+            grid-template-columns: 20% 50% 30%;
+            grid-template-rows: 50% 50%;
+            color: #fff;
+            font-size: 0.8em;
+            cursor: pointer;
+            column-gap: 0.5rem;
+            padding: 0.7rem;
+        }
+        
+        .trends-panel .follow div {
+            padding: 1rem;
+        }
+        
+        .trends-panel .follow .person1 .gridf1 {
+            margin: 0;
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        
+        .trends-panel .follow .person1 .gridf2 {
+            margin: 0;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            align-self: end;
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+        
+        .trends-panel .follow .person1 .gridf3 {
+            margin: 0;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            color: gray;
+            align-self: start;
+            font-size: 1.2em;
+            font-weight: lighter;
+        }
+        
+        .trends-panel .follow .person1 .gridf4 {
+            margin: 0;
+            grid-column: 3/4;
+            grid-row: 1/3;
+            /* align-self: center; */
+            /* border: 1px solid blue; */
+            border-radius: 5rem;
+            height: 2rem;
+            /* padding: 0; */
+            width: 5rem;
+            font-weight: 700;
+            margin-top: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .trends-panel .follow .person1 img {
+            width: 80%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .trends-panel .follow div:last-of-type {
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        
+        .trends-panel .follow div:last-of-type a {
+            text-decoration: none;
+            color: #1DA1F2;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        
+        .trends-panel .follow .person1 .gridf2 .tick {
+            width: 10%;
+            align-self: end;
+            text-align: center;
         }
