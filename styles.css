@@ -333,6 +333,33 @@
             background-color: #202E3A;
         }
         
+        .feed-panel .feed .activity {
+            display: grid;
+            grid-template-columns: repeat(4, 29%);
+            padding: 0.5rem;
+        }
+        
+        .feed-panel .feed .activity div {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 7px;
+            color: gray;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        
+        .feed-panel .feed .activity .reply:hover {
+            color: #1DA1F2;
+        }
+        
+        .feed-panel .feed .activity .retweet:hover {
+            color: green;
+        }
+        
+        .feed-panel .feed .activity .likes:hover {
+            color: hotpink;
+        }
+        
         .feed-panel .feed .prof {
             grid-column: 1/2;
             grid-row: 1/2;
